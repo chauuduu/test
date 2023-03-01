@@ -12,9 +12,9 @@ namespace AppCrud.Models
         [Required]
         public int Id { get; private set; }
         [MaxLength(100)]
-        //[Required(ErrorMessage = "FullName is required")]
+        [Required(ErrorMessage = "FullName is required")]
         public string FullName { get; private set; } 
-        public DateTime Birthday { get; private set; } 
+        public DateTime Birthday { get; private set; }
         public DateTime Date { get; private set; } 
         [MaxLength(20)]
         [Phone(ErrorMessage = "You have to enter a valid phone")]
@@ -36,7 +36,7 @@ namespace AppCrud.Models
             Date = date;
             Phone = phone.Trim();
             Address = address.Trim();
-            Email = address.Trim();
+            Email = email.Trim();
         }
 
         public Customer()

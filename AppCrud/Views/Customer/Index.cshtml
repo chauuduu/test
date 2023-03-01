@@ -2,7 +2,7 @@
     Layout = "/Views/Shared/_Layout.cshtml";
     ViewData["Title"] = "Customer";
 }
-
+@model AppCrud.ViewModel.CustomerViewModel
 
 <div class="container">
 
@@ -52,20 +52,17 @@
                             <div class="mb-3 mt-3">
                                 <label for="txtname" class="form-label">Full Name : </label>
                                 <input type="text" class="form-control" id="txtname" placeholder="Enter Name" name="txtname" required>
-
                                 <label for="txtbirthday" class="form-label">Birthday : </label>
-                                <input type="date" class="form-control" id="txtbirthday" placeholder="Enter Birthday" name="txtbirthday" required>
+                                <input type="date" class="form-control" id="txtbirthday" placeholder="Enter Birthday" name="txtbirthday">
 
                                 <label for="txtphone" class="form-label">Phone : </label>
-                                <input type="text" class="form-control" id="txtphone" placeholder="Enter Phone" name="txtphone" required>
+                                <input type="text" class="form-control" id="txtphone" placeholder="Enter Phone" name="txtphone">
 
                                 <label for="txtaddress" class="form-label">Address : </label>
-                                <input type="text" class="form-control" id="txtaddress" placeholder="Enter Address" name="txtaddress" required>
+                                <input type="text" class="form-control" id="txtaddress" placeholder="Enter Address" name="txtaddress">
 
                                 <label for="txtemail" class="form-label">Email : </label>
-                                <input type="email" class="form-control" id="txtemail" placeholder="Enter Email" name="txtemail" required>
-
-
+                                <input type="email" class="form-control" id="txtemail" placeholder="Enter Email" name="txtemail">
                             </div>
                             <button type="button" class="btn btn-primary" onclick="Add()">Submit</button>
                         </div>
@@ -76,5 +73,6 @@
         </div>
     </div>
 </div>
-
-<script src="~/js/site.js" asp-append-version="true"></script>
+<script src="https://momentjs.com/downloads/moment.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+<script src="~/js/site.js"></script>

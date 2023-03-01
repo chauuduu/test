@@ -1,6 +1,7 @@
 ﻿using AppCrud.Data;
 using AppCrud.Interface;
 using AppCrud.Models;
+using AppCrud.ViewModel;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -8,7 +9,7 @@ namespace AppCrud.Repository
 {
     public class CustomerRepository : ICustomerRepository
     {
-        public string Add(Customer Customer)
+        public string Insert(CustomerViewModel Customer)
         {
             using (var db = new MyDbContext())
             {
@@ -58,7 +59,7 @@ namespace AppCrud.Repository
             }
         }
 
-        public string Update(int Id, Customer Customer)
+        public string Update(int Id, CustomerViewModel Customer)
         {
             using (var db = new MyDbContext())
             {

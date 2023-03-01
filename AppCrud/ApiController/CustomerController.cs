@@ -1,5 +1,6 @@
 ﻿using AppCrud.Models;
 using AppCrud.Service.CustomersService;
+using AppCrud.ViewModel;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
@@ -9,42 +10,42 @@ namespace AppCrud.ApiController
     [Route("api/[controller]")]
     public class CustomerController : ControllerBase
     {
-        readonly ICustomerService CustomerService;
-        public CustomerController(ICustomerService CustomerService)
+        readonly ICustomerService customerService;
+        public CustomerController(ICustomerService _customerService)
         {
-            this.CustomerService = CustomerService;
+            this.customerService = _customerService;
         }
 
 
         [HttpGet]
         public IActionResult Get()
         {
-            return Ok(CustomerService.GetList());
+            return Ok(customerService.GetList());
         }
         [HttpGet("id")]
         public IActionResult GetById(int id)
         {
-            return Ok(CustomerService.GetById(id));
+            return Ok(customerService.GetById(id));
         }
         [HttpGet("name")]
         public IActionResult GetListLike(string name)
         {
-            return Ok(CustomerService.GetListLike(name));
+            return Ok(customerService.GetListLike(name));
         }
         [HttpPost]
-        public async Task<IActionResult> Insert(Customer customer)
+        public async Task<IActionResult> Insert(CustomerViewModel customer)
         {
-            return Ok(CustomerService.Add(customer));
+            return Ok(customerService.Insert(customer));
         }
         [HttpPut]
-        public async Task<IActionResult> Update(int id, Customer customer)
+        public async Task<IActionResult> Update(int id, CustomerViewModel customer)
         {
-            return Ok(CustomerService.Update(id, customer));
+            return Ok(customerService.Update(id, customer));
         }
         [HttpDelete]
         public IActionResult Delete(int id)
         {
-            return Ok(CustomerService.Delete(id));
+            return Ok(customerService.Delete(id));
         }
     }
 }

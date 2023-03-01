@@ -1,5 +1,6 @@
 ﻿using AppCrud.Interface;
 using AppCrud.Models;
+using AppCrud.ViewModel;
 using System.Collections.Generic;
 
 namespace AppCrud.Service.CustomersService
@@ -12,14 +13,9 @@ namespace AppCrud.Service.CustomersService
             this.customerRepository = _customerRepository;
         }
 
-        public string Add(Customer Customer)
+        public string Insert(CustomerViewModel Customer)
         {
-            var clothe = customerRepository.GetById(Customer.Id);
-            if (clothe == null)
-            {
-                return customerRepository.Add(Customer);
-            }
-            return "Failed";
+             return customerRepository.Insert(Customer);
         }
 
         public string Delete(int Id)
@@ -47,7 +43,7 @@ namespace AppCrud.Service.CustomersService
             return customerRepository.GetListLike(Name);
         }
 
-        public string Update(int Id, Customer Customer)
+        public string Update(int Id, CustomerViewModel Customer)
         {
             var clothe = customerRepository.GetById(Id);
             if (clothe == null)

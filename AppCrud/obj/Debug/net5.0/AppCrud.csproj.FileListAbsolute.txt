@@ -203,3 +203,4 @@ C:\Users\Admin\source\repos\MVCEFA\MVC\AppCrud\obj\Debug\net5.0\AppCrud.pdb
 C:\Users\Admin\source\repos\MVCEFA\MVC\AppCrud\obj\Debug\net5.0\AppCrud.genruntimeconfig.cache
 C:\Users\Admin\source\repos\MVCEFA\MVC\AppCrud\obj\Debug\net5.0\ref\AppCrud.dll
 C:\Users\Admin\source\repos\MVCEFA\MVC\AppCrud\obj\Debug\net5.0\Razor\Views\Customer\Index.cshtml.g.cs
+C:\Users\Admin\source\repos\MVCEFA\MVC\AppCrud\bin\Debug\net5.0\AutoMapper.dll
