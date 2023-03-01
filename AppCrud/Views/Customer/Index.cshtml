@@ -1,0 +1,80 @@
+﻿@{
+    Layout = "/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Customer";
+}
+
+
+<div class="container">
+
+    <div class="row">
+        @*//<h2>@ViewBag["Message"]</h2>*@
+        <h2> Customer </h2>
+        <h4></h4>
+        <div class="container text-right">
+            <button type="button" class="btn btn-success btn-lg float-end" data-toggle="modal" data-target="#myModal">
+                Add
+            </button>
+        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Full Name</th>
+                    <th scope="col">Birthday</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Phone</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">Email</th>
+                    <th colspan="2">Action</th>
+                </tr>
+            </thead>
+            <tbody id="bodyContent">
+            </tbody>
+            <div id="renderUpdate">
+            </div>
+        </table>
+
+        <div class="modal" id="myModal">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Add Customer</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <div class="mb-3 mt-3">
+                                <label for="txtname" class="form-label">Full Name : </label>
+                                <input type="text" class="form-control" id="txtname" placeholder="Enter Name" name="txtname" required>
+
+                                <label for="txtbirthday" class="form-label">Birthday : </label>
+                                <input type="date" class="form-control" id="txtbirthday" placeholder="Enter Birthday" name="txtbirthday" required>
+
+                                <label for="txtphone" class="form-label">Phone : </label>
+                                <input type="text" class="form-control" id="txtphone" placeholder="Enter Phone" name="txtphone" required>
+
+                                <label for="txtaddress" class="form-label">Address : </label>
+                                <input type="text" class="form-control" id="txtaddress" placeholder="Enter Address" name="txtaddress" required>
+
+                                <label for="txtemail" class="form-label">Email : </label>
+                                <input type="email" class="form-control" id="txtemail" placeholder="Enter Email" name="txtemail" required>
+
+
+                            </div>
+                            <button type="button" class="btn btn-primary" onclick="Add()">Submit</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/js/site.js" asp-append-version="true"></script>
