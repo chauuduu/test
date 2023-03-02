@@ -1,4 +1,5 @@
-﻿using AppCrud.Models;
+﻿
+using AppCrud.ViewModel;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;

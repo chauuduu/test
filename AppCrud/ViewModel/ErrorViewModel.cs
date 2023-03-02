@@ -1,6 +1,6 @@
 using System;
 
-namespace AppCrud.Models
+namespace AppCrud.ViewModel
 {
     public class ErrorViewModel
     {
